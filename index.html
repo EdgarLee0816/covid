@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid</title>
+
+    <style>
+
+        *{margin:0; padding:0; box-sizing: border-box;}
+
+        h1 {display:none}
+
+        section {max-width: 1000px; margin: auto; border:5px dashed red; margin-top:50px; position:relative; overflow:hidden;}
+        /* 이렇게 하면 이미지 row 사이즈가 600이기 때문에 우측에 공간이 많이 생긴다.*/
+
+        img {display:block;}
+        /* 모든 이미지의 인라인 요소의 하단 여백을 없애준다 */
+
+        img:not(:first-of-type){position:absolute;}
+        /* img의 첫번째 요소를 제외하고 나머지 img는 position을 absolute 시켜라*/
+        /* */
+
+        [src*="bg4"] {width:100%;}
+        /* 이렇게 하면 bg4 백그라운드 이미지의 폭이 section(모)에서 설정해 놓은 폭에 맞춰지면서 비율에 맞게 height값이 자동으로 계산되어 꽉채워진다. */
+
+        [src*="4-1"] { top:10%; left:1%; width:58%; } /*이미지의 위치 및 크기 조정*/
+        
+        img:nth-of-type(2) {animation:rotate 2s both alternate infinite;} /* 애니메이션 효과 조정(무한 반복하는지, both로 마지막 위치를 고정 하는지, alternate로 역재생 하는지 등을 조절) */
+
+        @keyframes rotate  /*키 프레임으로 from to를 하거나 0%~100%까지 개별 설정*/
+        {
+            from {transform:scale(0.2) rotate(720deg);}
+            to {transform:scale(1) rotate(0deg);}
+        }
+        
+        [src*="4-2"] { top:1%; left:2%; width:65%;}
+
+        img:nth-of-type(3) {animation:Xrol 2s both;}
+
+        @keyframes Xrol
+        {
+            from {transform:scaleX(0);}
+            to {transform:scaleX(1);}
+        }
+
+        [src*="4-3"] { top:55%; left:0%; width:37%;}
+
+        img:nth-of-type(4) {animation:up 2s 0.5s both;}
+
+        @keyframes up
+        {
+            from {top:100%; opacity: 0;}
+            to {top:55%; opacity: 1;}
+        }
+
+        [src*="4-4"] { top:0%; left:70%; width:30%;}
+
+        img:nth-of-type(5) {animation:down 2s 0.8s both;}
+
+        @keyframes down
+        {
+            from {top:-50%; opacity: 0; }
+            to {top:0%; opacity: 1; }
+        }
+
+        [src*="4-5"] { top:0%; left:45%; width:55%}
+
+        img:nth-of-type(6) {animation:up1 2s 1s both;}
+        @keyframes up1
+        {
+            from {top:100%; opacity: 0;}
+            to {top:40%; opacity: 1;}
+        }
+
+        [src*="4-6"] { top:57%; left:0%; width:25%;}
+
+        img:nth-of-type(7) {animation:toleft1 2s 0.7s both;}
+        @keyframes toleft1
+        {
+            from {left:100%; opacity: 0;}
+            to {left:73%; opacity: 1;}
+        }
+
+        [src*="4-7"] { top:70%; left:0%; width:25%;}
+
+        img:nth-of-type(8) {animation:toleft2 2s 0.9s both;}
+        @keyframes toleft2
+        {
+            from {left:100%; opacity: 0;}
+            to {left:73%; opacity: 1;}
+        }
+
+        [src*="4-8"] { top:83%; left:0%; width:25%;}
+
+        img:nth-of-type(9) {animation:toleft3 2s 1.1s both;}
+        @keyframes toleft3
+        {
+            from {left:100%; opacity: 0;}
+            to {left:73%; opacity: 1;}
+        }
+
+        [src*="4-9"] {top:0%; left:0%; width:22%;}
+
+        img:nth-of-type(10) {animation:up5 2s 0.5s both;}
+        @keyframes up5
+        {
+            0% { left:0%; opacity: 0; }
+            50% { left:80%; opacity: 1; }
+            70% { left:80%;  transform:rotate(0deg);}
+            100% { left:80%;  transform:rotate(360deg);}
+        }
+
+        [src*="4-10"] {top:10%; left:50%; width:22%;}
+
+        img:nth-of-type(11) {animation:scale1 1s 0.5s alternate infinite both;}
+        @keyframes scale1
+        {
+            from { transform:scale(0.5); }
+            to { transform:scale(1); }
+        }
+
+        [src*="4-11"]{top:0%; left:30%; width:35%;}
+
+        img:nth-of-type(12) {animation:up2 2s 0.5s both; }
+        @keyframes up2
+        {
+            from{ top:100%; opacity: 0;}
+            to{ top:92%; opacity: 1;}
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>코비드 극복하기</h1>
+        <img src="images/bg4.jpg" alt="배경">
+        <img src="images/4-1.png" alt="마스크">
+        <img src="images/4-2.png" alt="전염을 막는 지혜로운 방법">
+        <img src="images/4-3.png" alt="우리 함께 잘 견디고 이겨내요!">
+        <img src="images/4-4.png" alt="마스크소독제">
+        <img src="images/4-5.png" alt="손소독제">
+        <img src="images/4-6.png" alt="뉴에티켓">
+        <img src="images/4-7.png" alt="팩트체크">
+        <img src="images/4-8.png" alt="치유레터">
+        <img src="images/4-9.png" alt="별">
+        <img src="images/4-10.png" alt="지구본">
+        <img src="images/4-11.png" alt="URL">
+
+    </section>
+</body>
+</html>
